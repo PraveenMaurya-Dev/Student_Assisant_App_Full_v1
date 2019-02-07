@@ -40,6 +40,7 @@
         app:layout_constraintEnd_toEndOf="@id/guideline_right"
         android:background="@drawable/et_bg"
         android:hint="Email Address"
+        android:textColorHint="@color/Login_form_details"
         android:padding="16dp"
         app:layout_constraintStart_toStartOf="@id/guideline_left"
         app:layout_constraintTop_toBottomOf="@+id/icon" />
@@ -54,22 +55,35 @@
         android:background="@drawable/et_bg"
         android:hint="Password"
         android:padding="16dp"
-        android:drawableRight=""
+        android:textColorHint="@color/Login_form_details"
         app:layout_constraintStart_toStartOf="@id/guideline_left"
         app:layout_constraintTop_toBottomOf="@+id/username" />
 
     <Button
+        android:id="@+id/btn_login"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
+        android:textColor="@color/Login_form_details_medium"
         android:text="Login Now"
         android:textAllCaps="false"
         android:background="@drawable/btn_bg"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <TextView
+        android:id="@+id/forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don't Remember password"
+        android:textColor="@color/Login_form_details"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintEnd_toEndOf="@id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login"
+        android:layout_marginTop="16dp"
 
         />
 
