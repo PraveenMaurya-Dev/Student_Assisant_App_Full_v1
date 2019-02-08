@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "76126104991",
+    "firebase_url": "https://student-assistant-43c63.firebaseio.com",
+    "project_id": "student-assistant-43c63",
+    "storage_bucket": "student-assistant-43c63.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:76126104991:android:6603b032fdc9fa80",
+        "android_client_info": {
+          "package_name": "com.psassistant.student_assistant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "76126104991-5s7rggvhvf9mcgg61ts6bsafgejrticv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDprfpipox6It2mjbbWExgbyUctjWBlpB8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
