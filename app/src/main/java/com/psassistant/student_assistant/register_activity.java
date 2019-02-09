@@ -58,6 +58,7 @@ public class register_activity extends AppCompatActivity {
         ImgUserPhoto = findViewById(R.id.regUserPhoto);
         loadingProgress = findViewById(R.id.reg_progressBar);
         regBtn = findViewById(R.id.regBtn);
+        loadingProgress.setVisibility(View.INVISIBLE);
         mAuth = FirebaseAuth.getInstance();
 
 
