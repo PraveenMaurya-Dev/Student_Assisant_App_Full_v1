@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "76126104991-ogbabfg861lmtja8u4gs1ue0vbpdrnp4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.psassistant.student_assistant",
+            "certificate_hash": "6b3ce840549a0ff7419cf51aef35a7df5df65517"
+          }
+        },
+        {
           "client_id": "76126104991-5s7rggvhvf9mcgg61ts6bsafgejrticv.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "76126104991-5s7rggvhvf9mcgg61ts6bsafgejrticv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2
