@@ -175,7 +175,7 @@ public class register_activity extends AppCompatActivity {
                                                 if(task.isSuccessful()){
 
                                                     //user info updated successfully
-                                                    showMessage("Register Complete");
+                                                    showMessage("Register Completed");
                                                     updateUI();
                                                 }
                                         }
