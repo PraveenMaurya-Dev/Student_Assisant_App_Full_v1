@@ -1,12 +1,12 @@
 package com.psassistant.student_assistant;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.view.Gravity;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -24,6 +24,8 @@ import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.psassistant.student_assistant.Fragments.HomeFragment;
+import com.psassistant.student_assistant.Fragments.ProfileFragment;
+import com.psassistant.student_assistant.Fragments.SettingsFragment;
 
 public class Home extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -146,13 +148,26 @@ public class Home extends AppCompatActivity
         if (id == R.id.nav_home) {
             // Handle the home action
             getSupportActionBar().setTitle("Home");
-            getSupportFragmentManager().beginTransaction().replace(R.id.container,new HomeFragment().commit());
+            getSupportFragmentManager().beginTransaction().replace(R.id.container,new HomeFragment()).commit();
 
         } else if (id == R.id.nav_profile) {
+            //handle the profile action
+            getSupportActionBar().setTitle("Profile");
+            getSupportFragmentManager().beginTransaction().replace(R.id.container,new ProfileFragment()).commit();
 
-        } else if (id == R.id.nav_setting) {
+
+        } else if (id == R.id.nav_settings) {
+
+            //handle the setting action
+            getSupportActionBar().setTitle("Settings");
+            getSupportFragmentManager().beginTransaction().replace(R.id.container,new SettingsFragment()).commit();
 
         } else if (id == R.id.nav_sign_out) {
+            //handle the sign out action
+           FirebaseAuth.getInstance().signOut();
+            Intent login_activity = new Intent(getApplicationContext(),Login_activity.class);
+            startActivity(login_activity);
+            finish();
 
 
         }
