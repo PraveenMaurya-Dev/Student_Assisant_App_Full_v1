@@ -1,9 +1,12 @@
 package com.psassistant.student_assistant;
 
 import android.app.Dialog;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.view.Gravity;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -41,11 +44,11 @@ public class Home extends AppCompatActivity
 
         //ini
 
-        mAuth = FirebaseAuth.getInstance();
-        currentUser = mAuth.getCurrentUser();
+        mAuth = FirebaseAuth.getInstance();    //initializing Firebase in home activity
+        currentUser = mAuth.getCurrentUser(); //getting current user login detail
 
         //ini popup
-        iniPopup();
+        //iniPopup();
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -65,7 +68,41 @@ public class Home extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        updateNavHeader();
+
+
+
     }
+
+     /*  private void iniPopup() {
+        popAddPost = new Dialog(this);
+        popAddPost.setContentView(R.layout.popup_add_post);
+        popAddPost.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        popAddPost.getWindow().setLayout(Toolbar.LayoutParams.MATCH_PARENT,Toolbar.LayoutParams.WRAP_CONTENT);
+        popAddPost.getWindow().getAttributes().gravity = Gravity.TOP;
+
+        //ini popup widgets
+        popupUserImage = popAddPost.findViewById(R.id.popup_user_image);
+        popupPostImage = popAddPost.findViewById(R.id.popup_img);
+        popupTitle = popAddPost.findViewById(R.id.popup_title);
+        popupDescription = popAddPost.findViewById(R.id.popup.description);
+        popupAddbtn = popAddPost.findViewById(R.id.popup_ProgressBar);
+
+        //load current user profile photo
+        Glide.with(Home.this).load(currentUser.getPhotoUrl()).into(popupUserImage);
+
+        //add post click listener
+
+        popupAddbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                popupAddbtn.setVisibility(View.INVISIBLE);
+                popupClickProgress.setVisibility(View.VISIBLE);
+            }
+        });
+
+    } */
 
     @Override
     public void onBackPressed() {
@@ -128,7 +165,7 @@ public class Home extends AppCompatActivity
         View headerView = navigationView.getHeaderView(0);
         TextView navUsername = headerView.findViewById(R.id.nav_username);
         TextView navUserEmail = headerView.findViewById(R.id.nav_user_email);
-        TextView navUserPhot = headerView.findViewById(R.id.nav_user_photo);
+        ImageView navUserPhot = headerView.findViewById(R.id.nav_user_photo);
 
         navUserEmail.setText(currentUser.getEmail());
         navUsername.setText(currentUser.getDisplayName());

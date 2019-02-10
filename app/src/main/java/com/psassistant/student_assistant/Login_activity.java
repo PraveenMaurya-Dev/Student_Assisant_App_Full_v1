@@ -47,12 +47,12 @@ public class Login_activity extends AppCompatActivity {
         btnlogin = findViewById(R.id.btn_login);
         loginProgress = findViewById(R.id.lg_progressBar);
         mAuth = FirebaseAuth.getInstance();
-        homeActivity = new Intent(this,com.psassistant.student_assistant.MainActivity.class);
+        homeActivity = new Intent(this,com.psassistant.student_assistant.Home.class); //calling Home activity
         loginPhoto = findViewById(R.id.icon); //temp
         loginPhoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent registerActivity = new Intent(getApplicationContext(),register_activity.class);
+                Intent registerActivity = new Intent(getApplicationContext(),register_activity.class); // calling register activity
                 startActivity(registerActivity);
                 finish();
             }
