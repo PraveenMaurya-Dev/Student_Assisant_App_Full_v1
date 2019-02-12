@@ -112,7 +112,7 @@ public class Login_activity extends AppCompatActivity {
                 if (task.isSuccessful()) {
                     loginProgress.setVisibility(View.INVISIBLE);
                     btnlogin.setVisibility(View.VISIBLE);
-                    updateUI();
+                    checkEmailVerification();
 
                 }   else
                 {
@@ -123,6 +123,22 @@ public class Login_activity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void checkEmailVerification(){
+        FirebaseUser firebaseUser = mAuth.getInstance().getCurrentUser();
+        Boolean emailflag = firebaseUser.isEmailVerified();
+        if (emailflag)
+        {
+
+            updateUI();
+
+        }
+        else {
+            Toast.makeText(Login_activity.this,"Please Verify the Email First !!", Toast.LENGTH_LONG).show();
+            mAuth.signOut();
+
+        }
     }
 
     private void updateUI() {

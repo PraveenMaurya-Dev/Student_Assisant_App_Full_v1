@@ -191,7 +191,7 @@ public class register_activity extends AppCompatActivity {
 
     private void updateUI() {
 
-        Intent homeActivity = new Intent(getApplicationContext(),Home.class);
+        Intent homeActivity = new Intent(getApplicationContext(),EmailVerification.class);
         startActivity(homeActivity);
         finish();
 
