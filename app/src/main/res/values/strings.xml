@@ -28,6 +28,6 @@
     <string name="hello_home_fragment">home</string>
     <string name="hello_setting_fragment">setting</string>
     <string name="sentverificationlink">Send Verification Link</string>
-    <string name="email_test_gmail_com">EMAIL : test@gmail.com</string>
+    <string name="email_test_gmail_com">test@gmail.com</string>
 
 </resources>
