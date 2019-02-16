@@ -42,12 +42,12 @@ public class Forgot_Password extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()){
-                                Toast.makeText(Forgot_Password.this,"Password Reset Email sent! ", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Forgot_Password.this,"Password Reset Email Sent! ", Toast.LENGTH_SHORT).show();
                                 finish();
                                 startActivity(new Intent(Forgot_Password.this,Login_activity.class));
 
                             }else {
-                                Toast.makeText(Forgot_Password.this,"Error in sending password reset email",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Forgot_Password.this,"Make Sure you have account or Create New one",Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
