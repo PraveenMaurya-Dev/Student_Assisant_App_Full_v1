@@ -27,6 +27,7 @@ public class Login_activity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private Intent homeActivity;
     private ImageView loginPhoto; //temp
+    private TextView forgot_password;
 
 
 
@@ -46,6 +47,7 @@ public class Login_activity extends AppCompatActivity {
         userPassword = findViewById(R.id.lg_password);
         btnlogin = findViewById(R.id.btn_login);
         loginProgress = findViewById(R.id.lg_progressBar);
+        forgot_password = findViewById(R.id.forgot_password);
         mAuth = FirebaseAuth.getInstance();
         homeActivity = new Intent(this,com.psassistant.student_assistant.Home.class); //calling Home activity
         loginPhoto = findViewById(R.id.icon); //temp
@@ -83,7 +85,12 @@ public class Login_activity extends AppCompatActivity {
         });
 
 
-
+        forgot_password.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Login_activity.this,Forgot_Password.class));
+            }
+        });
 
     }
 
