@@ -22,7 +22,20 @@
     <string name="verif_Info">Please Note that Email address should be real not fake</string>
     <string name="verif_header">Verifying Email Address... </string>
     <string name="forgot_pass_hint">Enter the Email Address</string>
+    <string name="email_address_valid">Please Note that email Address should be valid!</string>
     <string name="forgot_pass_btn">Reset Password</string>
+    <string name="std_info_first_name">First Name</string>
+    <string name="std_info_last_name">Last Name</string>
+    <string name="std_info_college_name">College Name</string>
+    <string name="std_info_next">Next</string>
+
+    <string-array name="year">
+        <item>FYIT</item>
+        <item>SYIT</item>
+        <item>TYIT</item>
+
+    </string-array>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -31,5 +44,6 @@
     <string name="hello_setting_fragment">setting</string>
     <string name="sentverificationlink">Send Verification Link</string>
     <string name="email_test_gmail_com">test@gmail.com</string>
+
 
 </resources>
