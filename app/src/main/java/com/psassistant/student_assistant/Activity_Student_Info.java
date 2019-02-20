@@ -71,7 +71,8 @@ public class Activity_Student_Info extends AppCompatActivity {
         users.setFirstname(std_first_name.getText().toString());
         users.setLastname(std_last_name.getText().toString());
         users.setCollegename(std_college_name.getText().toString());
-        users.setYear(selection.toString());
+        users.setYear(selection.getSelectedItem().toString());
+
 
 
     }
