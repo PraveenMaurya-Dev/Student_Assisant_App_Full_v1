@@ -51,11 +51,6 @@ public class EmailVerification extends AppCompatActivity {
                                     mAuth.signOut();
                                     UpdateUI();
 
-
-
-
-
-
                         } else {
                             Toast.makeText(EmailVerification.this, "Verifiction Link got Fail Please Try later!!", Toast.LENGTH_SHORT).show();
                         }
@@ -85,9 +80,6 @@ public class EmailVerification extends AppCompatActivity {
 
 
     }
-
-
-
 
 
 }
