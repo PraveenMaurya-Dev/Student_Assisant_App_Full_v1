@@ -1,7 +1,9 @@
 package com.psassistant.student_assistant;
 
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.support.annotation.NonNull;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -40,6 +42,14 @@ public class Activity_Student_Info extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student__info);
+
+        //background color
+        ConstraintLayout constraintLayout = findViewById(R.id.layout2);
+        AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground();
+        animationDrawable.setEnterFadeDuration(2000);
+        animationDrawable.setExitFadeDuration(4000);
+        animationDrawable.start();
+        //end
 
         selection = findViewById(R.id.spinner);
         std_first_name = findViewById(R.id.std_info_first_name);

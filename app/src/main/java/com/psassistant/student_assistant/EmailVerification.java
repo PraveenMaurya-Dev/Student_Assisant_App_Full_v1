@@ -1,7 +1,9 @@
 package com.psassistant.student_assistant;
 
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.support.annotation.NonNull;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -26,6 +28,14 @@ public class EmailVerification extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.emailverification);
+
+        //background color
+        ConstraintLayout constraintLayout = findViewById(R.id.layout3);
+        AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground();
+        animationDrawable.setEnterFadeDuration(2000);
+        animationDrawable.setExitFadeDuration(4000);
+        animationDrawable.start();
+        //end
 
         verif_email = (TextView) findViewById(R.id.Verif_Email);
         verif_send = (Button) findViewById(R.id.Verif_Send);
@@ -69,7 +79,7 @@ public class EmailVerification extends AppCompatActivity {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
 
-        verif_email.setText(new StringBuilder("Email :").append(user.getEmail()));
+        verif_email.setText(new StringBuilder("").append(user.getEmail()));
 
 
     }
