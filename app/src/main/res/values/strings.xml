@@ -29,6 +29,14 @@
     <string name="std_info_college_name">College Name</string>
     <string name="std_info_next">Next</string>
     <string name="std_info_basic_information">Fill the Information</string>
+    <string name="dashboard_head_name">Student Assistant</string>
+    <string name="dashboard_info">Welcome</string>
+    <string name="timetable">TimeTable</string>
+    <string name="syllabus">Syllabus</string>
+    <string name="subject">Subject</string>
+    <string name="chatroom">Chats</string>
+    <string name="notes">Notes</string>
+
 
 
     <string-array name="year">
