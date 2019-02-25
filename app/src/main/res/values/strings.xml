@@ -38,7 +38,6 @@
     <string name="notes">Notes</string>
 
 
-
     <string-array name="year">
         <item>FYIT</item>
         <item>SYIT</item>
@@ -54,6 +53,15 @@
     <string name="hello_setting_fragment">setting</string>
     <string name="sentverificationlink">Send Verification Link</string>
     <string name="email_test_gmail_com">StudentAssistant@gmail.com</string>
+
+    <string-array name="Week">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+    </string-array>
 
 
 </resources>

@@ -89,7 +89,7 @@ public class register_activity extends AppCompatActivity {
 
                     //something gose wrong , all the field must be filled
                     //we need to display an error message
-                    showMessage("Please Verify all field");
+                    showMessage("Please Check all field");
                     regBtn.setVisibility(View.VISIBLE);
                     loadingProgress.setVisibility(View.INVISIBLE);
 

@@ -7,6 +7,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.widget.CardView;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -16,6 +17,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -27,8 +29,7 @@ import com.psassistant.student_assistant.Fragments.HomeFragment;
 import com.psassistant.student_assistant.Fragments.ProfileFragment;
 import com.psassistant.student_assistant.Fragments.SettingsFragment;
 
-public class Home extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
     FirebaseAuth mAuth;
     FirebaseUser currentUser;
@@ -36,6 +37,9 @@ public class Home extends AppCompatActivity
     ImageView popupUserImage,popupPostImage,popupAddbtn;
     TextView popupTitle,popupDescription;
     ProgressBar popupClickProgress;
+    CardView timetable,syllabus,subject,chatrom,notes;
+
+
 
 
     @Override
@@ -45,6 +49,24 @@ public class Home extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        //change applied gridview start here
+
+        timetable = (CardView)findViewById(R.id.grid_timetable);
+        syllabus = (CardView) findViewById(R.id.grid_syllabus);
+        subject = (CardView) findViewById(R.id.grid_subject);
+        chatrom = (CardView) findViewById(R.id.grid_chatroom);
+        notes = (CardView) findViewById(R.id.grid_notes);
+        //adding onclick lister
+        timetable.setOnClickListener(this);
+        syllabus.setOnClickListener(this);
+        subject.setOnClickListener(this);
+        chatrom.setOnClickListener(this);
+        notes.setOnClickListener(this);
+
+
+
+
+        //gridview end here
         //ini
 
         mAuth = FirebaseAuth.getInstance();    //initializing Firebase in home activity
@@ -58,7 +80,7 @@ public class Home extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Those item are being develop", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
@@ -192,6 +214,34 @@ public class Home extends AppCompatActivity
 
     }
 
+//gridView layout start here
+    @Override
+    public void onClick(View view) {
+        Intent i;
+        int i1 = view.getId();
+        if (i1 == R.id.grid_timetable) {
+            i = new Intent(this,WeekActivity.class);
+            startActivity(i);
+        } else if (i1 == R.id.grid_syllabus) {
+            i = new Intent(this, ProfileFragment.class);
+            startActivity(i);
+        } else if (i1 == R.id.grid_subject) {
+            i = new Intent(this, SettingsFragment.class);
+            startActivity(i);
+        } else if (i1 == R.id.grid_chatroom) {
+            i = new Intent(this, HomeFragment.class);
+            startActivity(i);
+        } else if (i1 == R.id.grid_notes) {
+            i = new Intent(this, ProfileFragment.class);
+            startActivity(i);
+        } else {
 
 
+        }
+
+
+    }
+
+
+ //end here
 }
