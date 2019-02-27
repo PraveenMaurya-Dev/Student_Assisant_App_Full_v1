@@ -64,4 +64,101 @@
     </string-array>
 
 
+    <string-array name="Monday">
+        <item>Security in Computing</item>
+        <item>Geographical Information System</item>
+        <item>Break</item>
+        <item>ITSM</item>
+        <item>Business Intelligence</item>
+        <item>Software Quality Assurance</item>
+    </string-array>
+
+    <string-array name="Tuesday">
+        <item>Security in Computing</item>
+        <item>Geographical Information System</item>
+        <item>Break</item>
+        <item>Software Quality Assurance</item>
+        <item>Business Intelligence</item>
+        <item>ITSM</item>
+    </string-array>
+
+    <string-array name="Wednesday">
+        <item>Business Intelligence (Practical Batch - I (1-30))</item>
+        <item>Break</item>
+        <item>Software Quality Assurance</item>
+        <item>ITSM</item>
+    </string-array>
+
+    <string-array name="Thursday">
+        <item>Business Intelligence (Practical Batch - II)</item>
+        <item>Break</item>
+        <item>Software Quality Assurance</item>
+        <item>Geographical Information System</item>
+        <item>ITSM</item>
+    </string-array>
+
+    <string-array name="Friday">
+        <item>Security in Computing (Practical Batch - I (1-30))</item>
+        <item>Break</item>
+        <item>Security in Computing</item>
+        <item>Advanced Mobile Programming Practical(All Batch)</item>
+    </string-array>
+
+    <string-array name="Saturday">
+        <item>Security in Computing (Practical Batch - II )</item>
+        <item>Break</item>
+        <item>Business Intelligence</item>
+        <item>Geographical Information System Practical(All Batch)</item>
+
+    </string-array>
+
+    <string-array name="time1">
+        <item>7:30AM - 8:18AM</item>
+        <item>8:18AM - 9:54AM</item>
+        <item>9:54AM - 10:14AM</item>
+        <item>10:14AM - 11:02AM</item>
+        <item>11:02AM - 11:50AM</item>
+        <item>11:50AM - 12:35PM</item>
+    </string-array>
+
+    <string-array name="time2">
+        <item>7:30AM - 8:18AM</item>
+        <item>8:18AM - 9:54AM</item>
+        <item>9:54AM - 10:14AM</item>
+        <item>10:14AM - 11:02AM</item>
+        <item>11:02AM - 11:50AM</item>
+        <item>11:50AM - 12:35PM</item>
+    </string-array>
+
+    <string-array name="time3">
+        <item>7:30AM - 9:54AM</item>
+        <item>9:54AM - 10:14AM</item>
+        <item>10:14AM - 11:02AM</item>
+        <item>11:02AM - 11:50AM</item>
+
+    </string-array>
+
+    <string-array name="time4">
+        <item>7:30AM - 9:54AM</item>
+        <item>9:54AM - 10:14AM</item>
+        <item>10:14AM - 11:02AM</item>
+        <item>11:02AM - 11:50AM</item>
+        <item>11:50AM - 12:35PM</item>
+    </string-array>
+
+    <string-array name="time5">
+        <item>7:30AM - 9:54AM</item>
+        <item>9:54AM - 10:14AM</item>
+        <item>10:14AM - 11:02AM</item>
+        <item>11:02AM - 1:26PM</item>
+    </string-array>
+
+    <string-array name="time6">
+        <item>7:30AM - 9:54AM</item>
+        <item>9:54AM - 10:14AM</item>
+        <item>10:14AM - 11:02AM</item>
+        <item>11:02AM - 1:26PM</item>
+    </string-array>
+
+
 </resources>

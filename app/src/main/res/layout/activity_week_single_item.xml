@@ -27,7 +27,7 @@
             android:layout_marginTop="6dp"
             android:layout_toRightOf="@id/ivLetter"
             android:text="Days"
-            android:textSize="24sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
 
