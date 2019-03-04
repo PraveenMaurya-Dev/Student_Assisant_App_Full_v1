@@ -14,7 +14,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DayDetail"></activity>
+        <activity android:name=".Semester_Subject.SubjectDetails"></activity>
+        <activity android:name=".Semester_Subject.Semester_6_Sub" />
+        <activity android:name=".Semester_Subject.Semester_5_Sub" />
+        <activity android:name=".Semester_Subject.Semester_4_Sub" />
+        <activity android:name=".Semester_Subject.Semester_3_Sub" />
+        <activity android:name=".Semester_Subject.Semester_2_Sub" />
+        <activity android:name=".Semester_Subject.Semester_1_Sub" />
+        <activity android:name=".Semester.semester_1_sub" />
+        <activity android:name=".Semester" />
+        <activity android:name=".DayDetail" />
         <activity android:name=".WeekActivity" />
         <activity android:name=".Activity_Student_Info" />
         <activity android:name=".Forgot_Password" />

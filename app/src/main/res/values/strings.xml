@@ -36,6 +36,7 @@
     <string name="subject">Subject</string>
     <string name="chatroom">Chats</string>
     <string name="notes">Notes</string>
+    <string name="choose_semester">Choose Semester</string>
 
 
     <string-array name="year">
@@ -43,6 +44,26 @@
         <item>SYIT</item>
         <item>TYIT</item>
 
+    </string-array>
+
+    <string name="semester_I">Semester I</string>
+    <string name="semester_II">Semester II</string>
+    <string name="semester_III">Semester III</string>
+    <string name="semester_IV">Semester IV</string>
+    <string name="semester_V">Semester V</string>
+    <string name="semester_VI">Semester VI</string>
+
+
+
+
+
+    <string-array name="semester">
+        <item>Semester I</item>
+        <item>Semester II</item>
+        <item>Semester III</item>
+        <item>Semester IV</item>
+        <item>Semester V</item>
+        <item>Semester VI</item>
     </string-array>
 
 
@@ -158,6 +179,56 @@
         <item>9:54AM - 10:14AM</item>
         <item>10:14AM - 11:02AM</item>
         <item>11:02AM - 1:26PM</item>
+    </string-array>
+
+    <string-array name="semester_I_subject">
+        <item>Imperative Programming</item>
+        <item>Digital Electronics</item>
+        <item>Operating System</item>
+        <item>Discrete Mathematics</item>
+        <item>Communication Skills</item>
+    </string-array>
+
+
+    <string-array name="semester_II_subject">
+        <item>Object Oriented Programming</item>
+        <item>Microprocessor Architecture</item>
+        <item>Web Programming</item>
+        <item>Numerical And Statistical Methods</item>
+        <item>Green Computing</item>
+    </string-array>
+
+    <string-array name="semester_III_subject">
+        <item>Python</item>
+        <item>Data Structures</item>
+        <item>Computer Networks</item>
+        <item>Database Management System</item>
+        <item>Applied Mathematics</item>
+    </string-array>
+
+    <string-array name="semester_IV_subject">
+        <item>Core Java</item>
+        <item>Introduction to Embedded System</item>
+        <item>Computer Oriented Statical Techniques</item>
+        <item>Software Engineering</item>
+        <item>Computer Graphics and Animation</item>
+    </string-array>
+
+    <string-array name="semester_V_subject">
+        <item>Software Project Management</item>
+        <item>Internet of Things</item>
+        <item>Artificial Intelligence</item>
+        <item>Advanced Web Administration</item>
+        <item>Enterprise Java</item>
+    </string-array>
+
+
+    <string-array name="semester_VI_subject">
+        <item>Software Tesing</item>
+        <item>Security in Computing</item>
+        <item>Business Intelligence</item>
+        <item>Geographic Information System</item>
+        <item>Enterprise Networking</item>
     </string-array>
 
 

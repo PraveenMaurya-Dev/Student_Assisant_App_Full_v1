@@ -226,7 +226,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             i = new Intent(this, ProfileFragment.class);
             startActivity(i);
         } else if (i1 == R.id.grid_subject) {
-            i = new Intent(this, SettingsFragment.class);
+            i = new Intent(this, Semester.class);
             startActivity(i);
         } else if (i1 == R.id.grid_chatroom) {
             i = new Intent(this, HomeFragment.class);
