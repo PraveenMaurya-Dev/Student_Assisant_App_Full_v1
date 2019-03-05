@@ -223,7 +223,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             i = new Intent(this,WeekActivity.class);
             startActivity(i);
         } else if (i1 == R.id.grid_syllabus) {
-            i = new Intent(this, ProfileFragment.class);
+            i = new Intent(this, Syllabus.class);
             startActivity(i);
         } else if (i1 == R.id.grid_subject) {
             i = new Intent(this, Semester.class);

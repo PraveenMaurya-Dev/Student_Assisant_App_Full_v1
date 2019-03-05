@@ -37,6 +37,11 @@
     <string name="chatroom">Chats</string>
     <string name="notes">Notes</string>
     <string name="choose_semester">Choose Semester</string>
+    <string name="download_pdf">Download Pdf</string>
+    <string name="click_to_download">Click To Specific Year</string>
+    <string name="fyit">FYIT</string>
+    <string name="syit">SYIT</string>
+    <string name="tyit">TYIT</string>
 
 
     <string-array name="year">
@@ -218,17 +223,17 @@
         <item>Software Project Management</item>
         <item>Internet of Things</item>
         <item>Artificial Intelligence</item>
-        <item>Advanced Web Administration</item>
+        <item>ASP.NET</item>
         <item>Enterprise Java</item>
     </string-array>
 
 
     <string-array name="semester_VI_subject">
-        <item>Software Tesing</item>
+        <item>Information Technology Service Management</item>
         <item>Security in Computing</item>
         <item>Business Intelligence</item>
         <item>Geographic Information System</item>
-        <item>Enterprise Networking</item>
+        <item>Software Quality Assurance</item>
     </string-array>
 
 

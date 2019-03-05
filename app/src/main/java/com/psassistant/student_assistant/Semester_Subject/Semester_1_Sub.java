@@ -1,8 +1,10 @@
 package com.psassistant.student_assistant.Semester_Subject;
 
+import android.app.DownloadManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -15,11 +17,20 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 import com.psassistant.student_assistant.DayDetail;
 import com.psassistant.student_assistant.R;
+import com.psassistant.student_assistant.Syllabus;
 import com.psassistant.student_assistant.Utils.LetterImageView;
 import com.psassistant.student_assistant.WeekActivity;
+
+import static android.os.Environment.DIRECTORY_DOWNLOADS;
 
 public class Semester_1_Sub extends AppCompatActivity {
 
@@ -27,6 +38,10 @@ public class Semester_1_Sub extends AppCompatActivity {
     private ListView listView;
     public static SharedPreferences subjectPreferences;
     public static String SEL_SUBJECT;
+    FirebaseStorage firebaseStorage;
+    StorageReference storageReference;
+    FirebaseAuth mAuth;
+    StorageReference ref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,40 +77,154 @@ public class Semester_1_Sub extends AppCompatActivity {
 
         //on item click activity
 
-       /* listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+       listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 switch(position){
                     case 0:{
-                        startActivity(new Intent(Semester_1_Sub.this, SubjectDetails.class));
-                        subjectPreferences.edit().putString(SEL_SUBJECT, "Security_in_Computing").apply();
+
+                        storageReference = firebaseStorage.getInstance().getReference();
+                        ref=storageReference.child("FYIT_NOTES/ip-programming.pdf");
+
+                        ref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                            @Override
+                            public void onSuccess(Uri uri) {
+                                String url = uri.toString();
+                                downloadfile(Semester_1_Sub.this,"Imperative Programming",".pdf",DIRECTORY_DOWNLOADS,url);
+                                Showmessage();
+
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+
+                                ShowFailure();
+                                //showMessage(e.getMessage());
+
+                            }
+                        });
                         break;
                     }
                     case 1:{
-                        startActivity(new Intent(Semester_1_Sub.this, DayDetail.class));
-                        subjectPreferences.edit().putString(SEL_SUBJECT, "Geographical_Information_System").apply();
+                        storageReference = firebaseStorage.getInstance().getReference();
+                        ref=storageReference.child("FYIT_NOTES/Digital-Electronics.pdf");
+
+                        ref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                            @Override
+                            public void onSuccess(Uri uri) {
+                                String url = uri.toString();
+                                downloadfile(Semester_1_Sub.this,"Digital Electronics",".pdf",DIRECTORY_DOWNLOADS,url);
+                               Showmessage();
+
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+
+                                ShowFailure();
+                                //showMessage(e.getMessage());
+
+                            }
+                        });
                         break;
                     }
                     case 2:{
-                        startActivity(new Intent(Semester_1_Sub.this, DayDetail.class));
-                        subjectPreferences.edit().putString(SEL_SUBJECT, "ITSM").apply();
+                        storageReference = firebaseStorage.getInstance().getReference();
+                        ref=storageReference.child("FYIT_NOTES/modern-operating-systems.pdf");
+
+                        ref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                            @Override
+                            public void onSuccess(Uri uri) {
+                                String url = uri.toString();
+                                downloadfile(Semester_1_Sub.this,"Operating System",".pdf",DIRECTORY_DOWNLOADS,url);
+                                Showmessage();
+
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+
+                                ShowFailure();
+                                //showMessage(e.getMessage());
+
+                            }
+                        });
                         break;
                     }
                     case 3:{
-                        startActivity(new Intent(Semester_1_Sub.this, DayDetail.class));
-                        subjectPreferences.edit().putString(SEL_SUBJECT, "Business_Intelligence").apply();
+                        storageReference = firebaseStorage.getInstance().getReference();
+                        ref=storageReference.child("FYIT_NOTES/Discrete_Mathematics.pdf");
+
+                        ref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                            @Override
+                            public void onSuccess(Uri uri) {
+                                String url = uri.toString();
+                                downloadfile(Semester_1_Sub.this,"Discrete Mathematics",".pdf",DIRECTORY_DOWNLOADS,url);
+                                Showmessage();
+
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+
+                                ShowFailure();
+                                //showMessage(e.getMessage());
+
+                            }
+                        });
                         break;
                     }
                     case 4:{
-                        startActivity(new Intent(Semester_1_Sub.this, DayDetail.class));
-                        subjectPreferences.edit().putString(SEL_SUBJECT, "Software_Quality_Assurance").apply();
-                        break;
+                        storageReference = firebaseStorage.getInstance().getReference();
+                        ref=storageReference.child("FYIT_NOTES/cs.pdf");
+
+                        ref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                            @Override
+                            public void onSuccess(Uri uri) {
+                                String url = uri.toString();
+                                downloadfile(Semester_1_Sub.this,"Communication Skills",".pdf",DIRECTORY_DOWNLOADS,url);
+                                Showmessage();
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+
+                                ShowFailure();
+                                //showMessage(e.getMessage());
+
+                            }
+                        });
                     }
 
                     default:break;
                 }
             }
-        }); */
+        });
+    }
+
+    private void Showmessage(){
+
+        Toast.makeText(Semester_1_Sub.this,"Downloading....Check The Notification Bar",Toast.LENGTH_LONG).show();
+
+    }
+
+    private void ShowFailure(){
+        Toast.makeText(Semester_1_Sub.this,"Please Try Later",Toast.LENGTH_LONG).show();
+
+    }
+
+
+    private void downloadfile(Context context, String fileName, String fileExtension, String destinationDirectory, String url)
+    {
+        DownloadManager downloadManager = (DownloadManager) context.getSystemService(Context.DOWNLOAD_SERVICE);
+        Uri uri = Uri.parse(url);
+        DownloadManager.Request request = new DownloadManager.Request(uri);
+
+        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+        request.setDestinationInExternalFilesDir(context, destinationDirectory, fileName + fileExtension);
+
+        downloadManager.enqueue(request);
+
     }
 
     public class SubjectAdapter extends ArrayAdapter {
