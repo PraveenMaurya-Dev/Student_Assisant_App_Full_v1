@@ -51,7 +51,7 @@ public class WeekActivity extends AppCompatActivity {
 
     private void initToolbar(){
        setSupportActionBar(toolbar);
-       getSupportActionBar().setTitle("Week");
+       getSupportActionBar().setTitle("Days");
        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
     }

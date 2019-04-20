@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="?android:attr/actionBarSize"
         android:background="@color/colorPrimary"
-        app:titleTextColor="@color/Login_form_details_light"
+        app:titleTextColor="@color/cardview_dark_background"
         android:id="@+id/ToolbarWeek"
         >
     </android.support.v7.widget.Toolbar>
