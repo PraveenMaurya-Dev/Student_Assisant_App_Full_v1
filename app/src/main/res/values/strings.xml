@@ -18,7 +18,7 @@
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">FeedBack</string>
     <string name="verif_Info">Please Note that Email address should be real not fake</string>
     <string name="verif_header">Verifying Email Address... </string>
     <string name="forgot_pass_hint">Enter the Email Address</string>

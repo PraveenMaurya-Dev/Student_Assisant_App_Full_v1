@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_2"
+    android:background="@drawable/gradient_3"
     android:id="@+id/layout1"
     tools:context=".register_activity">
 
@@ -89,7 +89,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="8dp"
-        android:text="@string/reg_register"
+        android:text="Send"
         android:background="@drawable/btn_bg"
         android:textColor="@color/Login_form_details"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -122,7 +122,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="188dp"
-        android:text="Send"
+        android:text="@string/email_address_valid"
         android:textColor="@color/Login_form_details"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
