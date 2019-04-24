@@ -35,10 +35,12 @@
     <string name="syllabus">Syllabus</string>
     <string name="subject">Subject</string>
     <string name="chatroom">Chats</string>
-    <string name="notes">Notes</string>
+    <string name="faculty">Faculty</string>
     <string name="choose_semester">Choose Semester</string>
     <string name="download_pdf">Download Pdf</string>
     <string name="click_to_download">Click To Specific Year</string>
+    <string name="about_icon">About Us</string>
+    <string name="college_info">The Main objective of developing StudentAssistant is to help Student  for getting  Information  about  their  Course  where  Most  Student  Finds  difficulty.  The main goal of this  application  is  to  add  Mobility  and  Automation to  the  Process  of  managing  Student  Information  in  an  institute.  Student Assistant provide Feature such as Course Specific  Syllabus,  Notes  for  Subject,  Practical  Pdf with Videos,  Papers  for Practices, Black  Book  Pdf, Providing  Latest  News  from  University,  Blogs for Student, Projects Idea for the Student.</string>
     <string name="fyit">FYIT</string>
     <string name="syit">SYIT</string>
     <string name="tyit">TYIT</string>
@@ -51,15 +53,66 @@
 
     </string-array>
 
+    <string-array name="faculty_name">
+        <item>Sandeep Vishwakarma</item>
+        <item>Dipti Parab</item>
+        <item>Arvind Singh</item>
+        <item>Namrata Dube</item>
+        <item>Nitesh Shukla</item>
+        <item>Krishnkant Pandey</item>
+        <item>Alok Singh</item>
+
+    </string-array>
+
+    <string-array name="faculty_sandeep">
+        <item>1234567891</item>
+        <item>SandeepVishwakarma01@gmail.com</item>
+        <item>B.Sc(Physics),MCA</item>
+    </string-array>
+
+    <string-array name="faculty_dipti">
+        <item>1234567891</item>
+        <item>dipti01@gmail.com</item>
+        <item> 	M.Sc (Electronics)</item>
+    </string-array>
+
+    <string-array name="faculty_arvind">
+        <item>1234567891</item>
+        <item>arvind01@gmail.com</item>
+        <item>B.Sc(Physics),M.Sc(Comp.Sci)</item>
+    </string-array>
+
+    <string-array name="faculty_Namrata">
+        <item>1234567891</item>
+        <item>Namrata01@gmail.com</item>
+        <item>M.Sc in Maths,M.Phil,B.Ed</item>
+    </string-array>
+
+    <string-array name="faculty_Nitesh">
+        <item>1234567891</item>
+        <item>NiteshShukla01@gmail.com</item>
+        <item>M.Sc.(I.T.)</item>
+    </string-array>
+
+    <string-array name="faculty_Krishnkant">
+        <item>1234567891</item>
+        <item>KrishnkantPandey01@gmail.com</item>
+        <item>BE (IT)</item>
+    </string-array>
+
+    <string-array name="faculty_Alok">
+        <item>1234567891</item>
+        <item>AlokSingh01@gmail.com</item>
+        <item>Not Disclose</item>
+    </string-array>
+
+
     <string name="semester_I">Semester I</string>
     <string name="semester_II">Semester II</string>
     <string name="semester_III">Semester III</string>
     <string name="semester_IV">Semester IV</string>
     <string name="semester_V">Semester V</string>
     <string name="semester_VI">Semester VI</string>
-
-
-
 
 
     <string-array name="semester">

@@ -37,7 +37,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     ImageView popupUserImage,popupPostImage,popupAddbtn;
     TextView popupTitle,popupDescription;
     ProgressBar popupClickProgress;
-    CardView timetable,syllabus,subject,chatrom,notes;
+    CardView timetable,syllabus,subject,chatrom,faculty;
 
 
 
@@ -55,13 +55,13 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         syllabus = (CardView) findViewById(R.id.grid_syllabus);
         subject = (CardView) findViewById(R.id.grid_subject);
         chatrom = (CardView) findViewById(R.id.grid_chatroom);
-        notes = (CardView) findViewById(R.id.grid_notes);
+        faculty = (CardView) findViewById(R.id.grid_faculty);
         //adding onclick lister
         timetable.setOnClickListener(this);
         syllabus.setOnClickListener(this);
         subject.setOnClickListener(this);
         chatrom.setOnClickListener(this);
-        notes.setOnClickListener(this);
+        faculty.setOnClickListener(this);
 
 
 
@@ -229,10 +229,10 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             i = new Intent(this, Semester.class);
             startActivity(i);
         } else if (i1 == R.id.grid_chatroom) {
-            i = new Intent(this, HomeFragment.class);
+            i = new Intent(this, Chat_Activity.class);
             startActivity(i);
-        } else if (i1 == R.id.grid_notes) {
-            i = new Intent(this, ProfileFragment.class);
+        } else if (i1 == R.id.grid_faculty) {
+            i = new Intent(this, FacultyActivity.class);
             startActivity(i);
         } else {
 
