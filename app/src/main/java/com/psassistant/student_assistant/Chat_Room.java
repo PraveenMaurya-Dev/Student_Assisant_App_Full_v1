@@ -1,7 +1,10 @@
 package com.psassistant.student_assistant;
 
+import android.graphics.drawable.AnimationDrawable;
+import android.os.Message;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +17,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -30,10 +34,14 @@ public class Chat_Room extends AppCompatActivity {
     private String temp_key;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat__room);
+
+
+
 
         btn_send_msg = (Button) findViewById(R.id.btn_send);
         input_msg = (EditText) findViewById(R.id.msg_input);
@@ -44,6 +52,10 @@ public class Chat_Room extends AppCompatActivity {
         setTitle(" Room - "+room_name);
 
         root = FirebaseDatabase.getInstance().getReference().child(room_name);
+        //final DatabaseReference root = root_meg.child(room_name);
+
+
+
 
         btn_send_msg.setOnClickListener(new View.OnClickListener() {
             @Override
